@@ -18,17 +18,6 @@ var startdate = 0;
 var monthlyrate = "";
 
 
-function convert_date(date) {
-    var random_date = date;
-    var date_format = "MM/DD/YYYY"
-    return moment(random_date, date_format);
-}
-
-function conver_again(data_and) {
-    var a = moment('2016-01-01');
-    var b = a.add(1, 'week');
-    a.format();
-}
 
 $(document).ready(function() {
     var now = moment().subtract(startdate);
@@ -41,7 +30,7 @@ $(document).ready(function() {
             " </td><td id='role'> " + childSnapshot.val().role +
             " </td><td id='startDate'> " + childSnapshot.val().startdate +
             " </td><td id='months_worked'> " + now.diff(childSnapshot.val().startdate, "months") + "</td><td id='monthlyRate'>" + childSnapshot.val().monthlyrate +
-            "</td><td id='totalbilled'>" + (now.diff(childSnapshot.val().startdate) * (childSnapshot.val().monthlyrate)) + "</td></tr>");
+            "</td><td id='totalbilled'>$" + (now.diff(childSnapshot.val().startdate, "months") * (childSnapshot.val().monthlyrate)).toFixed(2) + "</td></tr>");
 
     });
 
