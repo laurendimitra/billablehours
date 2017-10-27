@@ -1,9 +1,9 @@
 .jumbotron {
     background-color: black;
-color: white;
-
+    color: white;
 }
 
-h1, h2 {
+h1,
+h2 {
     color: white;
 }
