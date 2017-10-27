@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Billable Hours</title>
     <!-- reset for same rendering across browsers -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -17,8 +16,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous">
+      <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
-      <script src="javascriptjs"></script>
+      <script src="main.js"></script>
       
 </head>
 
@@ -67,9 +67,9 @@
                             <b>Add Employee</b>
                         </div>
                         <div class="panel-body">
-                            <form>
+                            <form id="form">
                                 <div class="form-group">
-                                    <label for="emplyoeename">Emplyoee Name</label>
+                                    <label for="employeename">Employee Name</label>
                                     <input class="form-control" id="employeename">
                                     <label for="role">Role</label>
                                     <input class="form-control" id="role">
@@ -78,7 +78,7 @@
                                     <label for="monthly_rate">Monthly Rate</label>
                                     <input class="form-control" id="monthly_rate">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
                     
